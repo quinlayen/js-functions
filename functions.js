@@ -172,8 +172,9 @@ function maximum (x,y){
  * @param {number} n
  * @return {boolean} the number is even
  */
-function isEven (n){
-    if (n % 2 = 0){
+function isEven(n){
+    var remainder = n % 2;
+    if (remainder == 0){
         return true;
     }else{
         return false;
@@ -185,7 +186,14 @@ function isEven (n){
  * @param {number} n
  * @return {boolean} the number is odd
  */
-
+function isOdd(n){
+    var remainder = n % 2;
+    if (remainder != 0){
+        return true;
+    }else{
+        return false;
+    }
+}
 
 /**
  * Returns a letter grade.
@@ -199,6 +207,19 @@ function isEven (n){
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade(score){
+    if (score >=90 && score <=100){
+        return 'A';
+    }else if (score >=80 && score <=89){
+        return 'B'; 
+    }else if (score >=70 && score <=79){
+        return 'C';
+    }else if (score >=60 && score <=69){
+        return 'D';
+    }else if (score >=0 && score <=59){
+        return 'F';
+    }
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
