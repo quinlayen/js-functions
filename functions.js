@@ -3,21 +3,29 @@
  * @param {number} n
  * @return {string} the number as a string
  */
-
+function numberToString (n){
+	return n.toString();
+}
 
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
-
+function increase (n){
+    n++;
+    return n;
+}
 
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
-
+function decrease (n){
+    n--;
+    return n;
+}
 
 /**
  * Adds two numbers.
@@ -25,7 +33,10 @@
  * @param {number} y
  * @return {number} the sum
  */
-
+function add (x,y){
+    var sum = x + y;
+    return sum;
+}
 
 /**
  * Subtracts the second number from the first.
@@ -33,7 +44,10 @@
  * @param {number} y
  * @return {number} the difference
  */
-
+function subtract (x,y){
+    var difference = x - y;
+    return difference;
+}
 
 /**
  * Multiplies two numbers.
@@ -41,7 +55,10 @@
  * @param {number} y
  * @return {number} the product
  */
-
+function multiply (x,y){
+    var product = x * y;
+    return product;
+}
 
 /**
  * Divides the first number by the second.
@@ -49,14 +66,20 @@
  * @param {number} y
  * @return {number} the quotient
  */
-
+function divide (x,y){
+    var quotient = x / y;
+    return quotient;
+}
 
 /**
  * Multiplies a number by itself.
  * @param {number} x, number to be squared
  * @return {number} squared
  */
-
+function square(x){
+    var squared = Math.pow(x,2);
+    return squared;
+}
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -66,7 +89,12 @@
  * @param {number} y
  * @return {number} the result
  */
-
+function calculate (x,y){
+    var num = x + y;
+    return num;
+    document.write
+    
+}
 
 /**
  * Returns true if `a` is greater than `b`.
