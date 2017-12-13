@@ -208,6 +208,7 @@ function isOdd(n){
  */
 
 function letterGrade(score){
+    
     if (score >=90 && score <=100){
         return 'A';
     }else if (score >=80 && score <=89){
@@ -230,6 +231,17 @@ function letterGrade(score){
  */
 
 
+function incrementReviews(){
+    var restaurant = {
+    reviews: 1,
+};
+    if(restaurant.hasOwnProperty('reviews')){
+    restaurant.reviews = restaurant.reviews + 1;
+    }else{
+    restaurant.reviews = 1;
+    };
+    return restaurant;
+};
 /**
  * Joins two strings with a space.
  * @param {string} word1
@@ -237,6 +249,9 @@ function letterGrade(score){
  * @return {string} joined the words joined with a space
  */
 
+function combine(w1,w2){
+    return (w1 + ' ' + w2);
+}
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
