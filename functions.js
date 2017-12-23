@@ -89,14 +89,27 @@ function square(x){
  * @param {number} y
  * @return {number} the result
  */
-function calculate (x,y){
-    var add = x + y;
-    var xString = x.toString();
-    var yString = y.toString();
-    return add;
-    console.log(xString + ' + ' + yString  + ' = ' + add);
+function calculate (operation,x,y){
+    if (operation === 'add'){
+        let added = x + y;
+        console.log(x + ' + ' + y + ' = ' + added);
+        return added;
+    } else if (operation === 'subtract'){
+        let subtracted = x - y;
+        console.log(x + ' - ' + y + ' = ' + subtracted);
+        return subtracted;
+    } else if (operation === 'divide'){
+        let divided = x / y;
+        console.log(x + ' / ' + y + ' = ' + divided); 
+        return divided;   
+    } else if (operation === 'multiply'){
+        let multiplied = x * y;
+        console.log(x + ' * ' + y + ' = ' + multiplied);
+        return multiplied;
+    }
 }
-calculate(4,7);
+    
+
 /**
  * Returns true if `a` is greater than `b`.
  * @param {number} a
@@ -207,20 +220,23 @@ function isOdd(n){
  * @return {string} the score represented as a letter grade
  */
 
-function letterGrade(score){
-    
-    if (score >=90 && score <=100){
+function letterGrade(score,total){
+    console.log('***************ADJFHADFHAD**************')
+    let computed = (score/total) * 100;
+    console.log(computed);
+    if (computed >=90 && computed <=100 ){
         return 'A';
-    }else if (score >=80 && score <=89){
+    }else if (computed >=80 && computed <=89){
         return 'B'; 
-    }else if (score >=70 && score <=79){
+    }else if (computed >=70 && computed <=79){
         return 'C';
-    }else if (score >=60 && score <=69){
+    }else if (computed >=60 && computed <=69.99){
         return 'D';
-    }else if (score >=0 && score <=59){
+    }else if (computed >=0 && computed <=59){
         return 'F';
     }
 }
+
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -231,12 +247,10 @@ function letterGrade(score){
  */
 
 
-function incrementReviews(){
-    var restaurant = {
-    reviews: 1,
-};
-    if(restaurant.hasOwnProperty('reviews')){
-    restaurant.reviews = restaurant.reviews + 1;
+function incrementReviews(restaurant){
+
+    if(restaurant.reviews){
+    restaurant.reviews ++;
     }else{
     restaurant.reviews = 1;
     };
@@ -249,8 +263,8 @@ function incrementReviews(){
  * @return {string} joined the words joined with a space
  */
 
-function combine(w1,w2){
-    return (w1 + ' ' + w2);
+function combine(word1,word2){
+    return (word1 + ' ' + word2);
 }
 
 /**
@@ -260,4 +274,9 @@ function combine(w1,w2){
  * @param {number} radius
  * @return {object} circle
  */
-
+function createCircle(radius){
+    return circle = {
+        circumference: Math.PI * (radius + radius),
+        area: Math.PI * (radius * radius)
+    }
+}
